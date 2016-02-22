@@ -1,0 +1,952 @@
+﻿
+/***** 
+        TEST INCONSISTENCIES
+******/
+
+/*
+
+* { background-color: rgba(255,0,0,.2); }
+* * { background-color: rgba(0,255,0,.2); }
+* * * { background-color: rgba(0,0,255,.2); }
+* * * * { background-color: rgba(255,0,255,.2); }
+* * * * * { background-color: rgba(0,255,255,.2); }
+* * * * * * { background-color: rgba(255,255,0,.2); }
+
+*/
+
+/*
+    [class*='col-']{border: thin dotted red; }
+
+*/
+
+
+
+
+/****** HTML5 ************************************************************************************/
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+
+audio, canvas, video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+    audio:not([controls]) {
+        display: none;
+    }
+
+[hidden] {
+    display: none;
+}
+
+/****** BASE ************************************************************************************/
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+
+html {
+    font-size: 100%;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.231;
+    font-family: 'Raleway', sans-serif;
+}
+
+body, button, input, select, textarea {
+    font-family: 'Raleway', sans-serif;
+    color: #222;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+::-moz-selection {
+    background: #e6af61;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #e6af61;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+/****** LINKS ************************************************************************************/
+
+a {
+    color: #FF9427;
+    text-decoration: none;
+    -webkit-transition: color 0.2s linear;
+    -moz-transition: color 0.2s linear;
+}
+
+    a:visited {
+        color: #FF9427;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #222;
+        -webkit-transition: color 0.2s linear;
+        -moz-transition: color 0.2s linear;
+        text-decoration: none;
+    }
+
+    a:focus {
+        outline: thin dotted;
+    }
+
+    /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+    a:hover, a:active {
+        outline: 0;
+    }
+
+.site-link {
+    font-weight: 800;
+}
+
+
+/****** BUTTONS ************************************************************************************/
+
+.btn-default {
+    color: #E6AF61;
+    font-weight: 600;
+    border-color: #E6AF61;
+    min-width: 55px;
+}
+
+    .btn-default:hover {
+        border-color: #222;
+    }
+
+
+/****** TYPOGRAPHY ************************************************************************************/
+
+p {
+    font-family: 'Raleway', sans-serif;
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-size: 1.1em;
+    line-height: 1.6em;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+blockquote {
+    margin: 1em 40px;
+}
+
+dfn {
+    font-style: italic;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+ins {
+    background: #ff9;
+    color: #222;
+    text-decoration: none;
+}
+
+mark {
+    background: #ff0;
+    color: #222;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Redeclare monospace font family: h5bp.com/j */
+pre, code, kbd, samp {
+    font-family: monospace, monospace;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+
+/* Improve readability of pre-formatted text in all browsers */
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+q {
+    quotes: none;
+}
+
+    q:before, q:after {
+        content: "";
+        content: none;
+    }
+
+small {
+    font-size: 85%;
+}
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+
+
+/****** LISTS ************************************************************************************/
+
+ul, ol {
+    margin: 1em 0;
+    padding: 0 0 0 40px;
+}
+
+dd {
+    margin: 0 0 0 40px;
+}
+
+nav ul, nav ol {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+}
+
+/****** TABLE ************************************************************************************/
+table.skill-table th{
+    border-top: none !important;
+    text-align: center;
+    color: darkgray;
+}
+tr td {
+text-align: center;
+vertical-align: middle !important;
+}
+tr td:first-child {
+text-align: left;
+}
+
+
+/****** IMAGES ************************************************************************************/
+
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+}
+
+/* Correct overflow not hidden in IE9 */
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/****** HOMEPAGE - HEADER ************************************************************************************/
+
+header {
+    height: 80px;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+}
+
+.main-name {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.3em;
+    letter-spacing: 0.1em;
+    height: 40px;
+    line-height: 40px;
+    width: 200px;
+    margin: auto;
+    height: 40px;
+}
+
+    .main-name a {
+        padding: 10px;
+        color: #222;
+    }
+
+        .main-name a:hover {
+            color: #FF9427;
+            text-decoration: none;
+        }
+
+article {
+    width: 100%;
+    position: inherit;
+    display: block;
+}
+
+    article p {
+        margin-bottom: 25px;
+    }
+
+aside p {
+    margin-bottom: 25px;
+}
+
+aside {
+    width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header .container {
+    max-width: 1200px;
+}
+
+footer .container {
+    max-width: 1200px;
+}
+
+#name {
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+
+header {
+    border-bottom: thin solid lightgray;
+}
+
+
+
+
+/****** HOME PAGE - INTRO ************************************************************************************/
+
+#intro {
+    width: 100%;
+    min-height: 400px;
+    padding: 20px 0px 60px;
+    /*margin-top: -102px;*/
+    background: url("/images/seattle_skyline4.jpg") no-repeat scroll center center;
+    background-size: cover;
+    position: relative;
+    color: #FFF;
+    /*xmax-height: 760px;*/
+    text-align: center;
+}
+
+
+    #intro h1 {
+        xmax-width: 600px;
+        margin: 0px auto;
+        text-align: center;
+        font-weight: 400;
+        font-size: 2.1em;
+        letter-spacing: 0.1em;
+        padding: 0px 20px;
+        color: #FFF;
+    }
+
+
+#intro-animi {
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    color: #fff;
+    }
+
+h1#intro-animi {
+    font-size: 1.2em;
+}
+
+#role{
+    margin-top: 0;
+}
+
+
+.marquee {
+
+    max-width: 600px; 
+    margin-top: 100px;
+}
+
+.passion {
+    animation-delay: 5.2s;
+    -webkit-animation-delay: 5.2s;
+}
+
+.comp-proj-in .comp-proj-out {
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+}
+
+/* Inspired by Lea Verou's http://lea.verou.me/more-css-secrets/ and @samarkandiy*/
+
+.quality{
+  color: #fff; 
+  font-family: "Courier";
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  animation: type 5s steps(60, end); 
+  text-align: center;
+}
+
+.quality span.cursor{
+  animation: none;
+}
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+::selection{
+  background: white;
+}
+/*CSS3 type animation*/
+
+
+
+.lead {
+margin-bottom: 0;
+font-size: 19px;
+}
+.on-off {
+margin-right: 10px;
+ padding: 0 !important;
+}
+
+#on, #off{
+    padding: 6px 40px;
+}
+
+#content {
+    padding: 40px 40px 20px;
+}
+
+
+@media only screen and (min-width : 1200px) {
+
+    #intro {
+        min-height: 700px;
+    }
+   
+}
+
+@media only screen and (min-width : 992px) {
+
+    .marquee{
+        margin-top: 50px;
+    }
+   
+}
+
+@media only screen and (min-width : 768px) {
+
+    .marquee{
+        margin-top: 50px;
+    }
+   
+}
+
+@media only screen and (max-width : 768px) {
+
+#content {
+    padding: 20px;
+}
+
+    
+}
+
+
+/******
+   Index - About me interlude
+************************************************************************************/
+
+
+/******
+   RESUME 
+************************************************************************************/
+.date {
+   
+    margin-top: 0 !important;
+    font-size: 1.1em;
+    text-align: right;
+}
+
+@media only screen and (max-width : 992px) {
+
+    .date {
+       text-align: left;
+       padding-left: 0;
+    }
+    
+}
+
+.col-heading {
+    text-transform: uppercase;
+    margin-top: 0 !important;
+    xpadding-right: 15px;
+    xpadding-left: 25px;
+}
+
+.company-name {
+    margin-top: 0;
+    padding: 0 !important;
+}
+
+.job-title {
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+}
+
+.proj-desc {
+    padding: 20px 0 0 0;
+}
+
+.sub-proj-desc {
+    padding-left: 20px;
+}
+
+.vert-border {
+    border-left: thin solid lightgray;
+}
+
+/******
+   RESUME SKILLS
+************************************************************************************/
+
+ul.skill-list {
+    margin: 0;
+}
+
+    ul.skill-list li {
+        border: none;
+        padding-left: 0;
+        font-size: 1.1em;
+    }
+
+        ul.skill-list li:first-child {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        ul.skill-list li:last-child {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+.skill-list li.list-group-item:hover {
+    background-color: darkorange;
+}
+
+
+.skill-title {
+    font-weight: normal;
+}
+
+
+ul.job-list {
+    margin: 0;
+}
+
+    ul.job-list li {
+        border: none;
+        padding-left: 20px;
+        font-size: 1.1em;
+    }
+
+        ul.job-list li:first-child {
+            padding-top: 0;
+        }
+
+.job-title {
+    font-weight: 800;
+}
+
+ul.job-achievement {
+margin: 20px 0;
+font-size: 1.1em;
+}
+
+ul.job-achievement li {
+margin: 15px 0;
+}
+
+
+
+
+
+.thumbnail {
+    position: relative;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+    .thumbnail:hover {
+        background-color: #5CB85C;
+    }
+
+.votes {
+    font-size: 47px;
+    color: #197BB5;
+    padding: 10px;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+
+.image-block {
+    xborder: 3px solid white;
+    background-color: black;
+    padding: 0px;
+    margin: auto;
+    height: 1743px;
+    text-align: center;
+    vertical-align: bottom;
+    xmax-width: 3000px;
+    background-size: cover;
+}
+
+    .image-block > .text-center > p {
+        width: 100%;
+        height: 100%;
+        xfont-weight: normal;
+        xfont-size: 19px;
+        xpadding-top: 150px;
+        background-color: rgba(3,3,3,0.0);
+        color: white;
+    }
+
+    .image-block:hover > p {
+        background-color: rgba(3,3,3,0.5);
+        color: white;
+    }
+
+/******
+   Index - Footer
+************************************************************************************/
+
+footer a {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9em;
+    letter-spacing: 0.1em;
+}
+
+footer ul {
+    padding: 0;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+footer li {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+    footer li a {
+        padding: 5px;
+    }
+
+    footer li:last-child {
+        margin: 0;
+    }
+
+#end {
+    float: left;
+    margin-top: 10px;
+    padding-bottom: 25px;
+    width: 100%;
+}
+
+
+
+
+.navbar {
+    background-color: #1D1F20;
+    xborder: none;
+    border-color: #1D1F20;
+}
+
+
+
+
+
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir {
+    display: block;
+    border: 0;
+    text-indent: -999em;
+    overflow: hidden;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    text-align: left;
+    direction: ltr;
+}
+
+    .ir br {
+        display: none;
+    }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+    /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+    .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+    visibility: hidden;
+}
+
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+
+
+
+/******
+   Index - doughnut
+************************************************************************************/
+
+.chart {
+    margin: 0 auto;
+    width: 450px;
+    height: 450px;
+    position: relative;
+}
+
+.doughnutTip {
+    position: absolute;
+    float: left;
+    min-width: 30px;
+    max-width: 300px;
+    padding: 5px 15px;
+    border-radius: 1px;
+    background: rgba(0,0,0,.8);
+    color: #ddd;
+    font-size: 17px;
+    text-shadow: 0 1px 0 #222;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.3;
+    letter-spacing: .06em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    transform: all .3s;
+    pointer-events: none;
+}
+
+    .doughnutTip:after {
+        position: absolute;
+        left: 50%;
+        bottom: -6px;
+        content: "";
+        height: 0;
+        margin: 0 0 0 -6px;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        border-top: 6px solid rgba(0,0,0,.7);
+        line-height: 0;
+    }
+
+.doughnutSummary {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #d5d5d5;
+    text-align: center;
+    text-shadow: 0 -1px 0 #111;
+    cursor: default;
+}
+
+.doughnutSummaryTitle {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -27%;
+    font-size: 22px;
+    letter-spacing: .06em;
+}
+
+.doughnutSummaryNumber {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -15%;
+    font-size: 55px;
+}
+
+.chart path:hover {
+    opacity: .65;
+}
+
+/******
+   Index - Magnific Popup
+************************************************************************************/
+
+.portfolio-thumb {
+  xwidth: 20%;
+  xmargin-right: 35px;
+  background-color: #FFF;
+  display: inline-block;
+  min-height: 125px;
+  vertical-align: top;
+}
+
+
+@media only screen and (max-width : 768px) {
+
+.portfolio-thumb {
+  xmax-width: 20%;
+  xmargin-right: 15px;
+  min-height: 200px;
+  padding: 0 50px;
+}
+    
+}
+
+@media only screen and (max-width : 500px) {
+
+.portfolio-thumb {
+  xmax-width: 20%;
+  xmargin-right: 15px;
+  min-height: 200px;
+  padding: 0 20px;
+}
+    
+}
+
+@media only screen and (max-width : 360px) {
+
+.portfolio-thumb {
+  xmax-width: 20%;
+  xmargin-right: 15px;
+  min-height: 125px;
+  padding: inherit;
+}
+    
+}
+
+
+.portfolio-thumb:last-of-type {
+
+  margin-right: 0;
+
+}
+
+.portfolio-thumb img {
+  width: 100%;
+}
+
+.description {
+  xfont-size: 14px;
+  xpadding: 15px;
+  padding-top: 0px;
+  text-align: left;
+  xline-height: 20px;
+  background-color: white;
+  font-size: smaller;
+}
+
+.portfolio-thumb a {
+  text-decoration: underline;
+}
+
+.mfp-bg {
+background: transparent none repeat scroll 0% 0% !important;
+
+}
+
+.mfp-close{display: none !important;}
+
+
+
