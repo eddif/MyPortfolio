@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+
+    // Need better implementation for postback - this script needs to run on every page
+    $(document).ready(function () {
+
+        var thisLink = localStorage.getItem('thisLink');
+
+        var currLink = '#' + thisLink + ' ' + 'a';
+
+        $(currLink).addClass('active_nav').siblings().removeClass('active_nav');
+
+    });
+
+</script>
+<div id="content" class="container home_container">
+
+    <div class="row" style="padding-bottom:40px;">
+        <h2>About</h2>
+        </div></div>
+

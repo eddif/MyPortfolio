@@ -120,19 +120,20 @@ a {
         outline: 0;
     }
 
-.resume-link{
+.resume-link {
     font-weight: 800;
     color: black;
 }
-.resume-link:visited {
-    font-weight: 800;
-     color: black;
-}
 
-.resume-link:hover {
-    font-weight: 800;
-    color: blue;
-}
+    .resume-link:visited {
+        font-weight: 800;
+        color: black;
+    }
+
+    .resume-link:hover {
+        font-weight: 800;
+        color: blue;
+    }
 
 
 /****** BUTTONS ************************************************************************************/
@@ -283,18 +284,20 @@ nav ul, nav ol {
 }
 
 /****** TABLE ************************************************************************************/
-table.skill-table th{
+table.skill-table th {
     border-top: none !important;
     text-align: center;
     color: darkgray;
 }
+
 tr td {
-text-align: left;
-vertical-align: middle !important;
+    text-align: left;
+    vertical-align: middle !important;
 }
-tr td:first-child {
-text-align: left;
-}
+
+    tr td:first-child {
+        text-align: left;
+    }
 
 
 /****** IMAGES ************************************************************************************/
@@ -334,8 +337,8 @@ aside {
 .container {
     margin: 0 auto;
     padding: 20px;
-    
 }
+
 .home_container {
     max-width: 840px;
 }
@@ -345,82 +348,86 @@ aside {
 /*NEW HEADER*/
 
 header {
-  height:300px;
-  z-index:10;
-  margin-bottom: 80px;
+    height: 300px;
+    z-index: 10;
+    margin-bottom: 80px;
 }
+
 .header-banner {
-  background-color: #333;
-  background-image: url('/images/seattle_skyline4.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 300px;
+    background-color: #333;
+    background-image: url('/images/seattle_skyline4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
 }
 
 header .logo {
-  background-color: transparent;
-  background-image: url('/images/eddi_bw.jpg');
-  background-position: center top;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 72px; 
-  height: 256px;
-  width: 256px;
+    background-color: transparent;
+    background-image: url('/images/eddi_bw.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 72px;
+    height: 256px;
+    width: 256px;
 }
 
 header h1 {
-  position: absolute;
-  top: 72px; 
-  left: 255px;
-  color: #fff;
+    position: absolute;
+    top: 72px;
+    left: 255px;
+    color: #fff;
 }
+
 header h2 {
-  position: absolute;
-  top: 112px; 
-  left: 255px;
-  color: #fff;
+    position: absolute;
+    top: 112px;
+    left: 255px;
+    color: #fff;
 }
 
 .fixed-header {
-  position: fixed;
-  top:0; left:0;
-  width: 100%; 
-  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 nav {
-  width:100%;
-  height:60px;
-  background: #43A047;
-  z-index:10;
-  box-shadow: 0 4px 5px rgba(0,0,0,.26);
+    width: 100%;
+    height: 60px;
+    background: #43A047;
+    z-index: 10;
+    box-shadow: 0 4px 5px rgba(0,0,0,.26);
 }
 
-nav ul { 
-  list-style-type: none;
-  margin: 0 auto;
-  padding-left:0;
-  text-align:right;
-  width: 840px; 
-  max-width: 100%;
-}
-nav ul li { 
-  display: inline-block; 
-  line-height: 60px;
-  margin-left: 10px;
-}
-nav ul li a {
-  text-decoration: none; 
-  color: #fff;
-  text-transform: uppercase;
-  border-bottom: 2px solid rgba(255,255,255,0);
-}
+    nav ul {
+        list-style-type: none;
+        margin: 0 auto;
+        padding-left: 0;
+        text-align: right;
+        width: 840px;
+        max-width: 100%;
+    }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 60px;
+            margin-left: 10px;
+        }
+
+            nav ul li a {
+                text-decoration: none;
+                color: #fff;
+                text-transform: uppercase;
+                border-bottom: 2px solid rgba(255,255,255,0);
+            }
 
 .active_nav {
-  border-bottom: 2px solid rgba(255,255,255,0);
-  text-decoration: underline;
+    border-bottom: 2px solid rgba(255,255,255,0);
+    text-decoration: underline;
 }
 
 /*END NEW HEADER*/
@@ -473,20 +480,19 @@ nav ul li a {
     animation-delay: 2s;
     -webkit-animation-delay: 2s;
     color: #fff;
-    }
+}
 
 h1#intro-animi {
     font-size: 1.2em;
 }
 
-#role{
+#role {
     margin-top: 0;
 }
 
 
 .marquee {
-
-    max-width: 600px; 
+    max-width: 600px;
     margin-top: 100px;
 }
 
@@ -504,46 +510,57 @@ h1#intro-animi {
 
 /* Inspired by Lea Verou's http://lea.verou.me/more-css-secrets/ and @samarkandiy*/
 
-.quality{
-  color: #fff; 
-  font-family: "Courier";
-  font-size: 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 100%;
-  animation: type 5s steps(60, end); 
-  text-align: center;
+.quality {
+    color: #fff;
+    font-family: "Courier";
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    animation: type 5s steps(60, end);
+    text-align: center;
 }
 
-.quality span.cursor{
-  animation: none;
+    .quality span.cursor {
+        animation: none;
+    }
+
+@keyframes type {
+    from {
+        width: 0;
+    }
 }
 
-@keyframes type{ 
-  from { width: 0; } 
-} 
-
-@keyframes blink{
-  to{opacity: .0;}
+@keyframes blink {
+    to {
+        opacity: .0;
+    }
 }
 
-::selection{
-  background: white;
+::selection {
+    color: #fff;
+    background: #0288D1;
+}
+/* For Mozilla Firefox */
+::-moz-selection {
+    color: #fff;
+    background: #0288D1;
 }
 /*CSS3 type animation*/
 
 
 
 .lead {
-margin-bottom: 0;
-font-size: 19px;
-}
-.on-off {
-margin-right: 10px;
- padding: 0 !important;
+    margin-bottom: 0;
+    font-size: 19px;
 }
 
-#on, #off{
+.on-off {
+    margin-right: 10px;
+    padding: 0 !important;
+}
+
+#on, #off {
     padding: 6px 40px;
 }
 
@@ -557,32 +574,27 @@ margin-right: 10px;
     #intro {
         min-height: 400px;
     }
-   
 }
 
 @media only screen and (min-width : 992px) {
 
-    .marquee{
+    .marquee {
         margin-top: 50px;
     }
-
 }
 
 @media only screen and (min-width : 768px) {
 
-    .marquee{
+    .marquee {
         margin-top: 50px;
     }
-   
 }
 
 @media only screen and (max-width : 768px) {
 
-#content {
-    padding: 20px;
-}
-
-    
+    #content {
+        padding: 20px;
+    }
 }
 
 
@@ -595,7 +607,6 @@ margin-right: 10px;
    RESUME 
 ************************************************************************************/
 .date {
-   
     margin-top: 0 !important;
     font-size: 1.1em;
     text-align: right;
@@ -604,10 +615,9 @@ margin-right: 10px;
 @media only screen and (max-width : 992px) {
 
     .date {
-       text-align: left;
-       padding-left: 0;
+        text-align: left;
+        padding-left: 0;
     }
-    
 }
 
 .col-heading {
@@ -693,13 +703,13 @@ ul.job-list {
 }
 
 ul.job-achievement {
-margin: 20px 0;
-font-size: 1.1em;
+    margin: 20px 0;
+    font-size: 1.1em;
 }
 
-ul.job-achievement li {
-margin: 15px 0;
-}
+    ul.job-achievement li {
+        margin: 15px 0;
+    }
 
 
 
@@ -765,13 +775,13 @@ footer a {
     color: dimgray;
 }
 
-footer a:active {
-    color: dimgray;
-}
+    footer a:active {
+        color: dimgray;
+    }
 
-footer a:visited {
-    color: dimgray;
-}
+    footer a:visited {
+        color: dimgray;
+    }
 
 footer ul {
     padding: 0;
@@ -959,79 +969,72 @@ footer li {
 ************************************************************************************/
 
 .portfolio-thumb {
-  xwidth: 20%;
-  xmargin-right: 35px;
-  background-color: #FFF;
-  display: inline-block;
-  min-height: 125px;
-  vertical-align: top;
+    xwidth: 20%;
+    xmargin-right: 35px;
+    background-color: #FFF;
+    display: inline-block;
+    min-height: 125px;
+    vertical-align: top;
 }
 
 
 @media only screen and (max-width : 768px) {
 
-.portfolio-thumb {
-  xmax-width: 20%;
-  xmargin-right: 15px;
-  min-height: 200px;
-  padding: 0 50px;
-}
-    
+    .portfolio-thumb {
+        xmax-width: 20%;
+        xmargin-right: 15px;
+        min-height: 200px;
+        padding: 0 50px;
+    }
 }
 
 @media only screen and (max-width : 500px) {
 
-.portfolio-thumb {
-  xmax-width: 20%;
-  xmargin-right: 15px;
-  min-height: 200px;
-  padding: 0 20px;
-}
-    
+    .portfolio-thumb {
+        xmax-width: 20%;
+        xmargin-right: 15px;
+        min-height: 200px;
+        padding: 0 20px;
+    }
 }
 
 @media only screen and (max-width : 360px) {
 
-.portfolio-thumb {
-  xmax-width: 20%;
-  xmargin-right: 15px;
-  min-height: 125px;
-  padding: inherit;
-}
-    
+    .portfolio-thumb {
+        xmax-width: 20%;
+        xmargin-right: 15px;
+        min-height: 125px;
+        padding: inherit;
+    }
 }
 
 
 .portfolio-thumb:last-of-type {
-
-  margin-right: 0;
-
+    margin-right: 0;
 }
 
 .portfolio-thumb img {
-  width: 100%;
+    width: 100%;
 }
 
 .description {
-  xfont-size: 14px;
-  xpadding: 15px;
-  padding-top: 0px;
-  text-align: left;
-  xline-height: 20px;
-  background-color: white;
-  font-size: smaller;
+    xfont-size: 14px;
+    xpadding: 15px;
+    padding-top: 0px;
+    text-align: left;
+    xline-height: 20px;
+    background-color: white;
+    font-size: smaller;
 }
 
 .portfolio-thumb a {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .mfp-bg {
-background: transparent none repeat scroll 0% 0% !important;
-
+    background: transparent none repeat scroll 0% 0% !important;
 }
 
-.mfp-close{display: none !important;}
-
-
-
+.mfp-close {
+    display: none !important;
+}
