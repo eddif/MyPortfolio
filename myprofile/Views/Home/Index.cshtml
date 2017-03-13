@@ -3,55 +3,46 @@
 }
 
 <script>
-    $(document).ready(function () {
-        if ($('.comp-proj-out').hasClass('hidden')) {
 
-            $('.comp-proj-out').removeClass('hidden')
-        }
+    // Need better implementation for postback - this script needs to run on every page
+    $(document).ready(function () {
+
+        var thisLink = localStorage.getItem('thisLink');
+
+        var currLink = '#' + thisLink + ' ' + 'a';
+
+        $(currLink).addClass('active_nav').siblings().removeClass('active_nav');
 
     });
+
 </script>
 
 
 
-<div id="intro">
+<section>
 
-    <div class="container marquee" style="">
-
-        <div class="row" style="margin-bottom: 20px;">
-            <h1 class="text-center center-block passion animated fadeIn">Passionate about Quality</h1>
+    <div class="col-md-12">
+        <div>
+            <img class="img-responsivec center-block" src="~/images/webdev1.png" style="margin: 20px auto;" />
         </div>
-
-        <div class="row hidden-xs">
-            <p class="quality">Assert.True(Web.Quality(<span style="color: #F49D12">YourProject</span><span style="color: #FFF;">));</span></p>
-        </div>
-
-
-
     </div>
-</div>
 
+</section>
 
-
-<div id="content" class="container">
+<div id="content" class="container home_container">
 
     <div class="row" style="padding-bottom:40px;">
 
 
-        <div class="col-md-3">
-            <h3 class="col-heading text-center">About Me</h3>
-            <div>
-                <img class="img-responsivec center-block" src="~/images/me.200x200.png" style="margin: 20px auto;" />
-            </div>
-        </div>
+        <div class=""></div>
 
-        <div class="col-md-9">
+        <div class="col-md-12">
             <div class="col-md-12 vert-border">
 
 
-                <h2 id="role">Live in Seattle, love writing code</h2>
-                
-                <h3>The past (TL;DR;)</h3>
+                <h2 id="role">Quality in Seattle</h2>
+
+                <h3>Hospitality Industry to Tech Industry</h3>
 
                 <p>Early in my career in the Hospitality industry, I worked my way up from a busboy to a Food and Beverage Director at a large privately held corporation. Along the way, I became enamored with technology. This began when I had to write my first yearly budget and was given a 4 inch thick dot matrix printout of revenues and expenses and was asked to pencil-in "the numbers". I took that and developed and Excel based pivot table. Where it all changed was when my current club was the beta club for a new POS (Point of Sale) system that was expected to roll-out company wide. I became so fascinated with system and finding better methods to utilize it's capabilities. I actually enjoyed when it didn't work and had to speak with support to troubleshoot. For me, this was a sign and I decided to redirect my career to the technology field.</p>
 
@@ -68,173 +59,20 @@
                 <p>
 
 
-                <p>Take some time to look at profile, and if you're interested, <a class="site-link" href="mailto:contact@eddifey.com"> let's get in touch</a>.</p>
+                <p>Take some time to look at profile, and if you're interested, <a class="resume-link" href="mailto:contact@eddifey.com"> let's get in touch</a>.</p>
 
-                @*<div>
-                        <p>Take a 30 seconds to validate the layout of my site and toggle the On/Off buttons below to enable/disable background shading of element margins and padding.</p>
-                        <p>
-                            <div class="btn btn-default on-off">
-                            <div id="on" href="#">On</div></div>
-                            <div class="btn btn-default on-off">
-                            <div id="off" href="#">Off</div></div>
-                        </p>
-                    </div>
-                    <p>Basic css to validate elements have the proper spacing and dynamically shift appropiately as the screen resizes.</p>*@
-                <p>&nbsp;</p>
-                <hr />
-
-                <p>
-                    <div style="margin-top:20px;">
-                        <a class="btn btn-default" href="/resume">
-                            View Resume &raquo;
-                        </a>
-                    </div>
-
-                </p>
-
+                <div>
+                    <p>Here's a simple tool to validate a web site's padding and margins by color highlighting (especially beneficial for responsive websites):</p>
+                    <p>
+                        <div class="btn btn-default on-off">
+                            <div id="on" href="#">Show padding and margins</div>
+                        </div>
+                        <div class="btn btn-default on-off">
+                            <div id="off" href="#">Hide padding and margins</div>
+                        </div>
+                    </p>
+                </div>
             </div>
-
         </div>
-
     </div>
-
-    @*<div class="row" style="padding-bottom:40px;">
-            <div class="col-md-3">
-                <h3 class="col-heading text-left">Projects Tested</h3>
-            </div>
-            <div class="col-md-9">
-                <div class="col-md-12 vert-border">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h5 class=""><b>Project:&nbsp;</b><span>Kurryer (Gen2)</span></h5>
-                            <p>
-                                Description: Built on a C#/ASP.NET MVC/EmberJS/SQL stack, Gen2 added EmberJS and Bootstrap.<br />
-                                Featrures inlcuded: All IM & Gen1 features plus gamification, custom integrated applications and support forms.
-                            </p>
-                        </div>
-                    </div>
-
-
-                    <div class="row">
-
-
-                        <div class="portfolio-thumb col-sm-3 col-xs-6" style="margin-left: 0;">
-                            <a class="image-popup-no-margins" href="~/images/k3-home.png"><img src="~/images/k3-home_thumb.png"></a>
-                            <p class="description">Microsoft Solutions Center homepage</p>
-                        </div>
-                        <div class="portfolio-thumb col-sm-3 col-xs-6">
-                            <a class="image-popup-no-margins" href="~/images/k3-admin.png"><img src="~/images/k3-admin_thumb.png"></a>
-                            <p class="description">Admin portal (Social message)</p>
-                        </div>
-
-                        <div class="portfolio-thumb col-sm-3 col-xs-6">
-                            <a class="image-popup-no-margins" href="~/images/k3-mobile.png"><img src="~/images/k3-mobile_thumb.png"></a>
-                            <p class="description">Mobile (responsive)</p>
-                        </div>
-                        <div class="portfolio-thumb col-sm-3 col-xs-6">
-                            <a class="image-popup-no-margins" href="~/images/k3-localize.png"><img src="~/images/k3-localize_thumb.png"></a>
-                            <p class="description">Asset localization template</p>
-                        </div>
-
-
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-md-12">
-                            <h5 class=""><b>Project:&nbsp;</b><span>Kurryer (Gen1)</span></h5>
-                            <p>
-                                Description: Overhaul of Inspired Marketing, re-built on a C#/.NET MVC/Ajax/SQL stack. <br />
-                                Featrures inlcuded: All IM features plus social media management, assessments, content localization, assessments and custom pages.
-                            </p>
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-
-                        <div class="portfolio-thumb col-sm-3 col-xs-6" style="margin-left: 0;">
-                            <a class="image-popup-no-margins" href="~/images/k2-home.png"><img src="~/images/k2-home_thumb.png"></a>
-                            <p class="description">Microsoft OEM Salescenter homepage</p>
-                        </div>
-                        <div class="portfolio-thumb col-sm-3 col-xs-6">
-                            <a class="image-popup-no-margins" href="~/images/k2-extension.png"><img src="~/images/k2-extension_thumb.png"></a>
-                            <p class="description">Custom extension</p>
-                        </div>
-                        <div class="portfolio-thumb col-sm-3 col-xs-6">
-                            <a class="image-popup-no-margins" href="~/images/k2-mobile.png"><img src="~/images/k2-mobile_thumb.png"></a>
-                            <p class="description">Mobile (application)</p>
-                        </div>
-                        <div class="portfolio-thumb col-sm-3 col-xs-6">
-                            <a class="image-popup-no-margins" href="~/images/k2-report.png"><img src="~/images/k2-report_thumb.png"></a>
-                            <p class="description">Report module</p>
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h5 class=""><b>Project:&nbsp;</b><span>Inspired Marketing</span></h5>
-                            <p>
-                                Description: Ethofy's initial major project to unify numerous silo projects into a single codebase and provide a coherent UX. Built on 3-tier archtecture with Master Pages on a C#/ASP.NET WebForms/SQL stack.<br />
-                                Featrures inlcuded: client administration & localization, portal customization, content customization, syndication, reporting and eCommerce.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-
-                        <div class="portfolio-thumb col-sm-3 col-xs-6" style="margin-left: 0;">
-                            <a class="image-popup-no-margins" href="~/images/k1-home.png"><img src="~/images/k1-home_thumb.png"></a>
-                            <p class="description">Microsoft OEM Salescenter homepage</p>
-                        </div>
-                        <div class="portfolio-thumb col-sm-3 col-xs-6">
-                            <a class="image-popup-no-margins" href="~/images/k1-admin.png"><img src="~/images/k1-admin_thumb.png"></a>
-                            <p class="description">Admin portal (Catalog)</p>
-                        </div>
-                        <div class="portfolio-thumb col-sm-3 col-xs-6">
-                            <a class="image-popup-no-margins" href="~/images/k1-store.png"><img src="~/images/k1-store_thumb.png"></a>
-                            <p class="description">Store</p>
-                        </div>
-                        <div class="portfolio-thumb col-sm-3 col-xs-6">
-                            <a class="image-popup-no-margins" href="~/images/k1-syndi.png"><img src="~/images/k1-syndi_thumb.png"></a>
-                            <p class="description">Syndication</p>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="row" style="padding-bottom:40px;">
-            <div class="col-md-3">
-                <h3 class="col-heading text-left">Development Projects</h3>
-            </div>
-            <div class="col-md-9">
-                <div class="col-md-12 vert-border">
-
-                    <div class="row">
-
-                        <div class="portfolio-thumb col-sm-3 col-xs-6" style="margin-left: 0;">
-                            <a class="image-popup-no-margins" href="~/images/kurryer.com.png"><img src="~/images/kurryer.com_thumb.png"></a>
-                            <p class="description"><a href="http://www.kurryer.com" target="_blank">Kurryer Marketing</a></p>
-                        </div>
-                        <div class="portfolio-thumb col-sm-3 col-xs-6">
-                            <a class="image-popup-no-margins" href="~/images/getmobile.png"><img src="~/images/getmobile_thumb.png"></a>
-                            <p class="description"><a href="https://getmobilerebate.com/" target="_blank">Mobile Rebate</a></p>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>*@
-
-    <script type="text/javascript">
-
-    </script>
-
-
-
 </div>

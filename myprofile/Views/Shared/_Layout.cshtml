@@ -15,10 +15,12 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eddi - SDE/SDET</title>
+    <title>Eddi</title>
     @*<title>@ViewBag.Title - eddi</title>*@
     @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/site")
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,800,900,500,600,300,200' rel='stylesheet' type='text/css'>
     <script>
         (function (i, s, o, g, r, a, m) {
@@ -32,6 +34,15 @@
         ga('send', 'pageview');
 
     </script>
+
+    <script>
+        //$(document).ready(function () {
+        //    $('.nav-item a').click(function () {
+        //        $(this).addClass('active_nav');
+        //    });
+        //});
+    </script>
+
 </head>
 
 <body>
@@ -39,18 +50,25 @@
 
 
         <header>
-            <div id="name">
-                <h1 class="main-name">
-                    <a href="/">Eddi Fey</a>
-                </h1>
+            <div class="header-banner">
+                <a href="/" class="logo"></a>
+                <h1>Eddi Fey</h1>
+                <h2>Seattle, WA</h2>
             </div>
+            
+            <div class="clear"></div>
+                <nav>
+                    <ul>
+                        <li id="home_link" class="nav-item"><a class="" href="/">Home</></a></li>
+                        <li id="about_link" class="nav-item"><a href="/about">About</a></li>
+                        <li id="resume_link" class="nav-item"><a href="/resume">Resume</a></li>
+                    </ul>
+                </nav>
         </header>
+       
 
         <!-- render page -->
         @RenderBody()
-
-
-        <hr />
 
         <div class="container">
             <footer>
@@ -65,7 +83,6 @@
         </div>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/custom")
     @RenderSection("scripts", required: false)

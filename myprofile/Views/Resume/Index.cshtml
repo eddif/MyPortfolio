@@ -9,7 +9,16 @@
 
 <script>
 
+// Need better implementation for postback - this script needs to run on every page
+        $(document).ready(function () {
 
+            var thisLink = localStorage.getItem('thisLink');
+
+            var currLink = '#' + thisLink + ' ' + 'a';
+
+            $(currLink).addClass('active_nav').siblings().removeClass('active_nav');
+
+        });
 
 </script>
 
@@ -50,55 +59,7 @@
 
 
 
-    <div class="row" style="padding-bottom:40px; display: none;">
-
-        <div class="col-md-3">
-            <h3 class="col-heading text-left">Proficiencies</h3>
-        </div>
-
-
-        <div class="col-md-9">
-            <div class="col-md-12 vert-border ">
-                <div class="table-responsive">
-                    <table class="table skill-table">
-                        <tr>
-                            <th class="skill-title col-md-4"></th>
-                            <th class="col-md-5">Proficient</th>
-                            <th class="col-md-3">Intermediate</th>
-                        </tr>
-
-                        <tr>
-                            <td class="skill-title">Testing Automation Tools:</td>
-                            <td>Selenium WebDriver, NUnit, TestRail, <br />Jenkins, NCover, NodePing</td>
-                            <td>JMeter, Cucumber/SpecFlow</td>
-                        </tr>
-                        <tr>
-                            <td class="skill-title">Languages/Markup/Frameworks:</td>
-                            <td>C#, ASP.NET, MVC, HTML, CSS, Bootstrap</td>
-                            <td>PHP, Ruby, Less, Combres</td>
-                        </tr>
-                        <tr>
-                            <td class="skill-title">Bug Tracking/Related Tools:</td>
-                            <td>Assembla, FogBugz, SVN, Visual Studio, Jenkins CI</td>
-                            <td>JIRA, GIT/GitHub</td>
-                        </tr>
-                        <tr>
-                            <td class="skill-title">Scripting:</td>
-                            <td>JavaScript, JQuery, TSQL, PowerShell</td>
-                            <td>EmberJS</td>
-                        </tr>
-                        <tr>
-                            <td class="skill-title">Data stores:</td>
-                            <td>MS SQL Server, XML, JSON</td>
-                            <td></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
+    @*----------------- EXPERIENCE-----------------------*@
 
     <div class="row" style="padding-bottom:40px;">
 
@@ -110,7 +71,51 @@
         <div class="col-md-9">
             <div class="col-md-12 vert-border">
 
-                <h4 class="company-name col-md-8 col-sm-12"><a class="site-link" href="http://www.ethofy.com" target="_blank">Ethofy</a></h4>
+                <h4 class="company-name col-md-8 col-sm-12"><a class="resume-link" href="http://www.appleleisuregroup.com" target="_blank">Apple Leisure Group</a></h4>
+                <h4 class="col-md-4 col-md-12 date text-right">Jan 2016 &#45; Present</h4>
+
+                <h5 class="job-title col-md-12">QA Automation Engineer</h5>
+
+                <div class="col-md-12 proj-desc">
+
+                    <p>My role consisted of leading quality improvements over hotel contract loading, revenue management and pricing service for large startup project in the Travel Industry. Major efforts in establishing quality for ambiguous project and building from scratch - test plans, test cases, testing of 3rd party and private API web services, end-to-end testing, user acceptance testing and regression/smoke testing. Plus, debugging, debugging and debugging.</p>
+
+                    <h4>Key Accomplishments:</h4>
+                    <ul class="job-achievement">
+                        <li>
+                            Led Swat/Tiger team of key cross-team developers to track down breakdowns in complex, multi-faceted web service infrastructure to achieve end-to-end testing of pricing component. 
+                        </li>
+                        <li>
+                            Implemented and trained team on Gherkin story acceptance scenario testing writing approach that increased visibility into what was being testing and how, greatly reduced sprint overhead and was adopted companywide.
+                        </li>
+                        <li>
+                            Increased UI automation testing efficiency by 20% through pairwise testing design of complex, multi-functional UI features to reduce load and maintaining 100% test coverage. 
+                        </li>
+                        <li>
+                            Developed method of documenting end-to-end testing scenarios which was consumable throughout the organization and approved by ownership and deployed companywide for approval end to end testing.
+                        </li>
+                        <li>
+                            Increased API regression test coverage by 30% by converting 3rd party tool driven rest API test scripts into a Java/JUnit/Rest-assured automation test framework. 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row" style="padding-bottom:40px;">
+
+        <div class="col-md-3">
+            <h3 class="col-heading text-left"></h3>
+        </div>
+
+
+        <div class="col-md-9">
+            <div class="col-md-12 vert-border">
+
+                <h4 class="company-name col-md-8 col-sm-12"><a class="resume-link" href="http://www.ethofy.com" target="_blank">Ethofy</a></h4>
                 <h4 class="col-md-4 col-md-12 date text-right">Nov 2007 &#45; Sept 2015</h4>
 
                 <h5 class="job-title col-md-12">Software Development Engineer</h5>
@@ -119,34 +124,28 @@
 
                     <p>Joined Ethofy in an early-stage startup phase with a 10-person team. Served as the sole QA\Test Engineer, monitor and analyze every phase of development to ensure design quality standards and implement test methodologies, build test frameworks, develop test cases, perform manual testing and reporting of key metrics to team.</p>
                     
-                    <h4>Responsibilities:</h4>
+                    <h4>Key Accomplishments:</h4>
                     <ul class="job-achievement">
                         <li>
-                            Front-end web development of small to medium sized websites
+                            Successfully helped launch 3 SaaS applications from conception over the course of 7 years
                         </li>
                         <li>
-                            Front-end web development of client microsites
+                            Designed and developed Ethofy’s first comprehensive Test Automated Framework with over 1200 test scripts using C#, NUnit and Selenium WebDriver.
                         </li>
                         <li>
-                            Ensure product quality across all projects and integrate build quality into CI process
+                            Re-developed front-end on a C#/.NET MVC back-end improving UX with responsive design and modernizing with HTML5/CSS3/Bootstrap.
                         </li>
                         <li>
-                            Triage defects and fix\improve system processes and issues
+                            Designed automated test framework from the ground up achieving a scalable and maintainable Regression testing solution which resulted in a reduction of incoming rate of defects by 65%.
                         </li>
                         <li>
-                            Build UI test automation framework and write\execute automated and manual test scripts
+                            Designed and developed C# application to covert Excel data to HTML/JSON which served as a temporary solution to assist onboarding while product was being developed.
                         </li>
                         <li>
-                            Develop\engineer support tools\applications to assist Clients\PMs with onboarding
+                            Reduced total regression test execution time by 4.5 hours through the implementation of cross-browser parallelism and paving the way for new continuous delivery methodology and daily production deployments.
                         </li>
                         <li>
-                            Champion user-centered design, provide feedback to CEO and contribute to product vision
-                        </li>
-                        <li>
-                            Drive/bridge connections between all teams, and help define and prioritize requirements
-                        </li>
-                        <li>
-                            Setup, maintain environments, VMs, configure IIS, deployment of code
+                            Trained remote development teams on automation testing approaches, environment setup and integration into continuous integration build server to achieve goal of a centralized test process.
                         </li>
                     </ul>
                 </div>
@@ -156,19 +155,19 @@
                     <h4>Ethofy Projects:</h4>
 
 
-                    <h5><a href="http://kurryer.com" target="_blank">Kurryer</a>&nbsp;<span class="proj-date">(2011-2015)</span></h5>
+                    <h5><a class="resume-link" href="http://kurryer.com" target="_blank">Kurryer</a>&nbsp;<span class="proj-date">(2011-2015)</span></h5>
                     <p class="sub-proj-desc">
                         Web hosted (SaaS) solution enabling organizations to amplify delivery of messaging to customers.
                     </p>
                 
 
-                    <h5><a href="http://mulo01.ethofytools.com/?noredirect=1" target="_blank">Inspired Marketing</a>&nbsp;<span class="proj-date">(2008 - 2010)</span></h5>
+                    <h5><a class="resume-link" href="http://mulo01.ethofytools.com/?noredirect=1" target="_blank">Inspired Marketing</a>&nbsp;<span class="proj-date">(2008 - 2010)</span></h5>
                     <p class="sub-proj-desc">
                         Initial major project to unify numerous silo projects into a single codebase.
                     </p>
 
 
-                    <h5><a>Content Menu</a> &nbsp;<span class="proj-date">(2007 - 2008)</span></h5>
+                    <h5><a class="resume-link">Content Menu</a> &nbsp;<span class="proj-date">(2007 - 2008)</span></h5>
                     <p class="sub-proj-desc">
                         Hosted website for Microsoft channel partners supplying syndication content from Ethofy's proprietary JavaScript/CSS syndication library.
                     </p>
@@ -190,7 +189,7 @@
 
         <div class="col-md-9">
             <div class="col-md-12 vert-border">
-                <h4 class="company-name col-md-9"><a class="site-link" href="http://www.squirrelsystems.com/" target="_blank">Squirrel Systems</a> (f.k.a. &#34;Pacific Coast Systems&#34;)</h4>
+                <h4 class="company-name col-md-9"><a class="resume-link" href="http://www.squirrelsystems.com/" target="_blank">Squirrel Systems</a> (f.k.a. &#34;Pacific Coast Systems&#34;)</h4>
                 <h4 class="col-md-3 date text-right">Feb 2002 &#45; Nov 2007</h4>
 
                 <h5 class="job-title col-md-12">Systems Engineer</h5>
@@ -241,7 +240,7 @@
 
         <div class="col-md-9">
             <div class="col-md-12 vert-border">
-                <h4 class="company-name col-md-9"><a class="site-link" href="http://www.clubcorp.com/" target="_blank">ClubCorp</a></h4>
+                <h4 class="company-name col-md-9"><a class="resume-link" href="http://www.clubcorp.com/" target="_blank">ClubCorp</a></h4>
                 <h4 class="col-md-3 date text-right">1992 &#45; 2002</h4>
 
                 @*<h5 class="job-title col-md-12">Systems Engineer</h5>*@
@@ -253,10 +252,10 @@
                     <p>Responsible for the overall Food and Beverage operations.</p>
                     <p>Promoted/Transferred within the following:</p>
                     <ul class="list-group job-list">
-                        <li class="list-group-item"><span class="skill-title"><a href="http://www.clubcorp.com/Clubs/The-Hills-of-Lakeway" target="_blank">The Hills of Lakeway Country Club</a>&nbsp;&#45;&nbsp;<span class="subtitle">F&amp;B Director</span></span></li>
-                        <li class="list-group-item"><span class="skill-title"><a href="http://www.harborclub.org/" target="_blank">The Harbour Club</a>&nbsp;&#45;&nbsp;<span class="subtitle">General Manager</span></span></li>
-                        <li class="list-group-item"><span class="skill-title"><a href="http://www.clubcorp.com/Clubs/The-Downtown-Club" target="_blank">The Downtown Club at Houston Center</a>&nbsp;&#45;&nbsp;<span class="subtitle">F&amp;B Director</span></span></li>
-                        <li class="list-group-item"><span class="skill-title"><a href="http://www.clubcorp.com/Clubs/Greenspoint-Club" target="_blank">The Greenspoint Club</a>&nbsp;&#45;&nbsp;<span class="subtitle">Service Director</span></span></li>
+                        <li class="list-group-item"><span class="skill-title"><a class="resume-link" href="http://www.clubcorp.com/Clubs/The-Hills-of-Lakeway" target="_blank">The Hills of Lakeway Country Club</a>&nbsp;&#45;&nbsp;<span class="subtitle">F&amp;B Director</span></span></li>
+                        <li class="list-group-item"><span class="skill-title"><a class="resume-link" href="http://www.harborclub.org/" target="_blank">The Harbour Club</a>&nbsp;&#45;&nbsp;<span class="subtitle">General Manager</span></span></li>
+                        <li class="list-group-item"><span class="skill-title"><a class="resume-link" href="http://www.clubcorp.com/Clubs/The-Downtown-Club" target="_blank">The Downtown Club at Houston Center</a>&nbsp;&#45;&nbsp;<span class="subtitle">F&amp;B Director</span></span></li>
+                        <li class="list-group-item"><span class="skill-title"><a class="resume-link" href="http://www.clubcorp.com/Clubs/Greenspoint-Club" target="_blank">The Greenspoint Club</a>&nbsp;&#45;&nbsp;<span class="subtitle">Service Director</span></span></li>
                     </ul>
                 </div>
             </div>
@@ -272,8 +271,57 @@
         </div>
         <div class="col-md-9">
             <div class="col-md-12 vert-border">
-                <p>There's a good chance you'll find me<a class="site-link" href="https://www.flickr.com/photos/25580779@N07/21251363576/in/dateposted-public/" target="_blank">&nbsp;on a mountain</a>&nbsp;in a<a class="site-link" href="https://www.flickr.com/photos/25580779@N07/21253195065/in/album-72157658298520576/" target="_blank">&nbsp;sea of rave green</a>&nbsp;or in a never-win game of tug-of-war with<a class="site-link" href="https://www.flickr.com/photos/25580779@N07/21066329509/in/album-72157658298520576/" target="_blank">&nbsp;my dog</a>.</p>
+                <p>There's a good chance you'll find me<a class="resume-link" href="https://www.flickr.com/photos/25580779@N07/21251363576/in/dateposted-public/" target="_blank">&nbsp;on a mountain</a>&nbsp;in a<a class="resume-link" href="https://www.flickr.com/photos/25580779@N07/21253195065/in/album-72157658298520576/" target="_blank">&nbsp;sea of rave green</a>&nbsp;or in a never-win game of tug-of-war with<a class="resume-link" href="https://www.flickr.com/photos/25580779@N07/21066329509/in/album-72157658298520576/" target="_blank">&nbsp;my dog</a>.</p>
             </div>
+        </div>
+    </div>
+
+    <div class="row" style="padding-bottom:40px;">
+
+        <div class="col-md-3">
+            <h3 class="col-heading text-left">Proficiencies</h3>
+        </div>
+
+
+        <div class="col-md-9">
+            <div class="col-md-12 vert-border ">
+                <div class="table-responsive">
+                    <table class="table skill-table">
+                        <tr>
+                            <th class="skill-title col-md-4"></th>
+                        </tr>
+                        <tr>
+                            <td class="skill-title">Systems:</td>
+                            <td>Windows, MacOS, Linux</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-title">Test Automation:</td>
+                            <td>Selenium WebDriver, NUnit, TestRail, Postman, REST Assured, Jenkins, Chef, JMeter, SpecFlow, Sauce Labs. Browserstack, Docker, Turbo.net</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-title">Languages:</td>
+                            <td>Javascript/JQuery, C#, ASP.NET, Java, MVC, HTML, CSS, Ruby(rails), Gherkin/Cucumber</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-title">Bug Tracking:</td>
+                            <td>JIRA, Assembla, FogBugz</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-title">Scripting:</td>
+                            <td>TSQL, PowerShell, Terminal, EmberJS</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-title">Client/Server Data stores:</td>
+                            <td>MS SQL Server, PostgresSQL, XML, JSON</td>
+                        </tr>
+                        <tr>
+                            <td class="skill-title">Versioning:</td>
+                            <td>SVN, TortoiseSVN,  Git/GitHub/GitLab</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
         </div>
     </div>
 

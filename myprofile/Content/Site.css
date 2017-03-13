@@ -77,29 +77,30 @@ textarea {
 }
 
 ::-moz-selection {
-    background: #e6af61;
-    color: #fff;
-    text-shadow: none;
+    background-color: blue;
+    /*background: #43A047;*/
+    color: rgba(0,0,0,.26);
+    /*text-shadow: none;*/
 }
 
 ::selection {
-    background: #e6af61;
-    color: #fff;
-    text-shadow: none;
+    background-color: blue;
+    color: rgba(0,0,0,.26);
+    /*text-shadow: none;*/
 }
 
 
 /****** LINKS ************************************************************************************/
 
 a {
-    color: #FF9427;
+    color: #fff;
     text-decoration: none;
     -webkit-transition: color 0.2s linear;
     -moz-transition: color 0.2s linear;
 }
 
     a:visited {
-        color: #FF9427;
+        color: #fff;
         text-decoration: none;
     }
 
@@ -119,22 +120,47 @@ a {
         outline: 0;
     }
 
-.site-link {
+.resume-link{
     font-weight: 800;
+    color: black;
+}
+.resume-link:visited {
+    font-weight: 800;
+     color: black;
+}
+
+.resume-link:hover {
+    font-weight: 800;
+    color: blue;
 }
 
 
 /****** BUTTONS ************************************************************************************/
 
 .btn-default {
-    color: #E6AF61;
+    color: #fff;
     font-weight: 600;
-    border-color: #E6AF61;
+    border-color: #43A047;
     min-width: 55px;
+    border-radius: 0;
+    background-color: #43A047;
+    box-shadow: 0 2px 5px rgba(0,0,0,.26);
 }
 
     .btn-default:hover {
+        color: #fff;
         border-color: #222;
+        background-color: #388E3C;
+        border-color: #388E3C;
+        box-shadow: 0 4px 5px rgba(0,0,0,.26);
+    }
+
+    .btn-default::selection {
+        color: #fff;
+        border-color: #222;
+        background-color: #388E3C;
+        border-color: #388E3C;
+        box-shadow: 0 4px 5px rgba(0,0,0,.26);
     }
 
 
@@ -263,7 +289,7 @@ table.skill-table th{
     color: darkgray;
 }
 tr td {
-text-align: center;
+text-align: left;
 vertical-align: middle !important;
 }
 tr td:first-child {
@@ -286,35 +312,6 @@ svg:not(:root) {
 
 /****** HOMEPAGE - HEADER ************************************************************************************/
 
-header {
-    height: 80px;
-    width: 100%;
-    background: #fff;
-    overflow: hidden;
-}
-
-.main-name {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 1.3em;
-    letter-spacing: 0.1em;
-    height: 40px;
-    line-height: 40px;
-    width: 200px;
-    margin: auto;
-    height: 40px;
-}
-
-    .main-name a {
-        padding: 10px;
-        color: #222;
-    }
-
-        .main-name a:hover {
-            color: #FF9427;
-            text-decoration: none;
-        }
 
 article {
     width: 100%;
@@ -337,27 +334,112 @@ aside {
 .container {
     margin: 0 auto;
     padding: 20px;
+    
+}
+.home_container {
+    max-width: 840px;
 }
 
-header .container {
-    max-width: 1200px;
-}
 
-footer .container {
-    max-width: 1200px;
-}
 
-#name {
-    margin-bottom: 20px;
-    margin-top: 20px;
-
-}
+/*NEW HEADER*/
 
 header {
-    border-bottom: thin solid lightgray;
+  height:300px;
+  z-index:10;
+  margin-bottom: 80px;
+}
+.header-banner {
+  background-color: #333;
+  background-image: url('/images/seattle_skyline4.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
 }
 
+header .logo {
+  background-color: transparent;
+  background-image: url('/images/eddi_bw.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 72px; 
+  height: 256px;
+  width: 256px;
+}
 
+header h1 {
+  position: absolute;
+  top: 72px; 
+  left: 255px;
+  color: #fff;
+}
+header h2 {
+  position: absolute;
+  top: 112px; 
+  left: 255px;
+  color: #fff;
+}
+
+.fixed-header {
+  position: fixed;
+  top:0; left:0;
+  width: 100%; 
+  
+}
+
+nav {
+  width:100%;
+  height:60px;
+  background: #43A047;
+  z-index:10;
+  box-shadow: 0 4px 5px rgba(0,0,0,.26);
+}
+
+nav ul { 
+  list-style-type: none;
+  margin: 0 auto;
+  padding-left:0;
+  text-align:right;
+  width: 840px; 
+  max-width: 100%;
+}
+nav ul li { 
+  display: inline-block; 
+  line-height: 60px;
+  margin-left: 10px;
+}
+nav ul li a {
+  text-decoration: none; 
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(255,255,255,0);
+}
+
+.active_nav {
+  border-bottom: 2px solid rgba(255,255,255,0);
+  text-decoration: underline;
+}
+
+/*END NEW HEADER*/
+
+/*SHADOW*/
+._shadow {
+    position: absolute;
+    bottom: -12px;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+._shadow {
+    background-image: url('/images/shadow.png');
+    background-repeat: repeat-x;
+    background-size: 1px 12px;
+    height: 12px;
+}
 
 
 /****** HOME PAGE - INTRO ************************************************************************************/
@@ -365,11 +447,10 @@ header {
 #intro {
     width: 100%;
     min-height: 400px;
-    padding: 20px 0px 60px;
-    /*margin-top: -102px;*/
-    background: url("/images/seattle_skyline4.jpg") no-repeat scroll center center;
+    *margin-top: 202px;
+    background: url("/images/webdev_back.jpg") no-repeat scroll center center;
     background-size: cover;
-    position: relative;
+    /*position: relative;*/
     color: #FFF;
     /*xmax-height: 760px;*/
     text-align: center;
@@ -474,7 +555,7 @@ margin-right: 10px;
 @media only screen and (min-width : 1200px) {
 
     #intro {
-        min-height: 700px;
+        min-height: 400px;
     }
    
 }
@@ -484,7 +565,7 @@ margin-right: 10px;
     .marquee{
         margin-top: 50px;
     }
-   
+
 }
 
 @media only screen and (min-width : 768px) {
@@ -681,6 +762,15 @@ footer a {
     font-weight: 600;
     font-size: 0.9em;
     letter-spacing: 0.1em;
+    color: dimgray;
+}
+
+footer a:active {
+    color: dimgray;
+}
+
+footer a:visited {
+    color: dimgray;
 }
 
 footer ul {
@@ -714,11 +804,6 @@ footer li {
 
 
 
-.navbar {
-    background-color: #1D1F20;
-    xborder: none;
-    border-color: #1D1F20;
-}
 
 
 
