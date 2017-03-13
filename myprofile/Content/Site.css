@@ -343,7 +343,9 @@ aside {
     max-width: 840px;
 }
 
-
+body{
+    background-color: #FCFCFC;
+}
 
 /*NEW HEADER*/
 
